@@ -1,0 +1,13 @@
+<div class='shop'>
+  Mein Shop
+  <div class='unitSelector'>
+    <app-unit *ngFor="let unit of getAvailableUnits()"
+    (click)="this.shop.buyUnit(this.unit, this.player)"
+    [shop]="shop"
+    [player]="player"
+    [unit]="unit"></app-unit>
+  </div>
+</div>
+
+
+
