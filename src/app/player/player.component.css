@@ -1,5 +1,8 @@
-.content{
-  padding: 20px;
+:host{
   border: 1px solid black;
-  display: inline-flex;
+  width: 350px;
+  height: 400px;
+  display: block;
+  padding: 10px;
+  box-sizing: border-box;
 }

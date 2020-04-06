@@ -1,4 +1,15 @@
 .mainContent{
   max-width: 700px;
+  width: 700px;
   border: 1px solid black;
+}
+
+.menuRow{
+  height: 500px;
+  position: relative;
+}
+
+.playersRow{
+  height: 400px;
+  position: relative;
 }

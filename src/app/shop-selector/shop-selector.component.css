@@ -5,11 +5,3 @@
   box-sizing: border-box;
   display: inline-block;
 }
-
-.available{
-  color: black;
-}
-
-.notAvailable{
-  color: grey;
-}

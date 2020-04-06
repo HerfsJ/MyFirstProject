@@ -1,0 +1,5 @@
+<app-shop-item *ngFor="let shop of shops"
+  (click)="click(shop)"
+
+  [item]="shop.toShopItem()">
+</app-shop-item>

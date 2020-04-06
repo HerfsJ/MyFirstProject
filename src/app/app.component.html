@@ -3,13 +3,26 @@
 
 Spielzeit: {{getGameTime()}}
 
-<div class='menuRow'>
-  <app-shop [player]="this.gameService.player1" [shop]="this.gameService.shop"></app-shop>
-  <app-unit-details [unit]="this.gameService.clickedUnit"></app-unit-details>
-</div>
 <div class='playersRow'>
-  <app-player [player]="this.gameService.player1" ></app-player>
-  <app-player [player]="this.gameService.cpu" ></app-player>
+  <div style='position: absolute; display:inline-block'>
+    <app-player [player]="this.gameService.player1" ></app-player>
+  </div>
+  <div style='position: absolute; right: 0px; display:inline-block'>
+    <app-player [player]="this.gameService.cpu" ></app-player>
+  </div>
+</div>
+<div class='menuRow'>
+  <div style='position: absolute; display:inline-block'>
+    <app-shop-selector [gameservice]="gameService" [shops]="gameService.shops"></app-shop-selector>
+  </div>
+  <div style='position: absolute; left: 200px; display:inline-block'>
+    <app-unit-details [unit]="this.gameService.clickedUnit"></app-unit-details>
+  </div>
+  <div style='position: absolute; right: 0px; display:inline-block'>
+    <app-shop [player]="this.gameService.player1" [shop]="this.gameService.clickedShop"></app-shop>
+  </div>
+
+
 </div>
 
 

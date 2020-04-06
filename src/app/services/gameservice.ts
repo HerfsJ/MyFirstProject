@@ -2,6 +2,8 @@ import { Player } from '../shared/player';
 import { Unit } from '../shared/unit';
 import { Shop } from '../shared/shop';
 import { Injectable } from '@angular/core';
+import { BasicUnitShop } from '../shared/basic-unit-shop';
+import { AdvancedUnitShop } from '../advanced-unit-shop';
 
 @Injectable()
 export class Gameservice {
@@ -12,17 +14,22 @@ export class Gameservice {
   title = 'my-first-project';
   player1: Player;
   cpu: Player;
-  shop: Shop;
+  shops: Shop[] = [];
+  basicUnitShop: BasicUnitShop;
   clickedUnit: Unit;
+  clickedShop: Shop;
 
   constructor() {
     this.initUnitPool();
-    this.shop = new Shop();
+    this.basicUnitShop = new BasicUnitShop();
+    this.shops.push(this.basicUnitShop);
+    this.shops.push(new AdvancedUnitShop());
     this.initCPU();
     this.initPlayer();
 
     this.cpu.currentTarget = this.player1;
     this.player1.currentTarget = this.cpu;
+    this.clickedShop = this.basicUnitShop;
 
     this.startGameLoop();
   }
@@ -32,10 +39,9 @@ export class Gameservice {
 
   initCPU() {
     this.cpu = new Player('Computer', true);
-    this.cpu.takeUnit(this.shop.buildUnitBasicWorker());
-    this.cpu.takeUnit(this.shop.buildUnitAttacker());
-    this.cpu.takeUnit(this.shop.buildUnitAttacker());
-
+    this.cpu.takeUnit(this.basicUnitShop.buildUnitBasicWorker());
+    this.cpu.takeUnit(this.basicUnitShop.buildUnitAttacker());
+    this.cpu.takeUnit(this.basicUnitShop.buildUnitAttacker());
   }
 
   initPlayer() {

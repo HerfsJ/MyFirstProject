@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Shop } from '../shared/shop';
 import { Unit } from '../shared/unit';
 import { Player } from '../shared/player';
+import { ShopItem } from '../shared/shop-item';
 
 @Component({
   selector: 'app-shop',
@@ -16,12 +17,12 @@ export class ShopComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  getAvailableUnits() {
-    return this.shop.getUnitPool();
+  getAvailableItems() {
+    return this.shop.getItemPool();
   }
 
-  buyUnit(unit: Unit) {
-    this.shop.buyUnit(unit, this.player);
+  buy(item: ShopItem) {
+    this.shop.buyItem(item, this.player);
   }
 
 }

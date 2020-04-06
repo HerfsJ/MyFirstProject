@@ -21,7 +21,7 @@ export class AppComponent {
 
   getGameTime(): number {
     return Math.round(Gameservice.currentGameTime / 1000);
-  };
+  }
 
 
 }

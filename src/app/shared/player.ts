@@ -2,7 +2,7 @@ import { Unit } from './unit';
 import { PerformsAction } from './performs-action';
 import { AppComponent } from '../app.component';
 
-export class Player implements PerformsAction{
+export class Player implements PerformsAction {
   hp = 1000;
   gold = 50;
   currentTarget: Player;

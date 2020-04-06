@@ -1,13 +1,7 @@
-<div class='shop'>
-  Meine Einheiten
-  <div class='unitSelector'>
-    <app-unit
+<div class='units'>
+<app-unit
       (click)="selectUnit(unit)"
       *ngFor="let unit of this.player.ownedUnits"
       [unit]="unit">
     </app-unit>
-  </div>
 </div>
-
-
-
