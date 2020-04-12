@@ -42,6 +42,20 @@ export class Gameservice {
     this.cpu.takeUnit(this.basicUnitShop.buildUnitBasicWorker());
     this.cpu.takeUnit(this.basicUnitShop.buildUnitAttacker());
     this.cpu.takeUnit(this.basicUnitShop.buildUnitAttacker());
+    this.cpu.takeUnit(this.basicUnitShop.buildUnitAttacker());
+    this.cpu.takeUnit(this.basicUnitShop.buildUnitAttacker());
+    this.cpu.takeUnit(this.basicUnitShop.buildUnitAttacker());
+    this.cpu.takeUnit(this.basicUnitShop.buildUnitAttacker());
+    this.cpu.takeUnit(this.basicUnitShop.buildUnitAttacker());
+    this.cpu.takeUnit(this.basicUnitShop.buildUnitAttacker());
+    this.cpu.takeUnit(this.basicUnitShop.buildUnitAttacker());
+    this.cpu.takeUnit(this.basicUnitShop.buildUnitAttacker());
+    this.cpu.takeUnit(this.basicUnitShop.buildUnitAttacker());
+    this.cpu.takeUnit(this.basicUnitShop.buildUnitAttacker());
+    this.cpu.takeUnit(this.basicUnitShop.buildUnitAttacker());
+    this.cpu.takeUnit(this.basicUnitShop.buildUnitAttacker());
+    this.cpu.takeUnit(this.basicUnitShop.buildUnitAttacker());
+    this.cpu.takeUnit(this.basicUnitShop.buildUnitAttacker());
   }
 
   initPlayer() {
